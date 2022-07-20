@@ -12,21 +12,11 @@
 </head>
 <body class="site-wrapper">
   <div class="topmenu">
-    <!--
-    <div class="adminbar">
-      <select name="switcher" onchange="set_stylesheet(this.value);reloadmenu();">
-      <option value="Umnochan">Umnochan</option>
-      <option value="Burichan">Burichan</option>
-      <option value="Futaba">Futaba</option>
-      <option value="Photon">Photon</option>
-      <option value="Kusaba">Kusaba</option>
-      <option value="Bluemoon">Bluemoon</option>
-      </select>
-      <a class="nav-btn nav-btn-home" href="/" target="_top" title="Главная"><svg class="icon icon-32">111</a>
-    </div>
-    -->
+
     <div class="navbar">[
-      <a title="/d/iscuss" href="/d/">d</a> 
+    {% for b in site.BOARDS %}
+      <a title="{{b.title}}" href="{{b.permalink}}">{{b.title}}</a>
+    {% endfor %} 
       ]
     </div>
   </div>
