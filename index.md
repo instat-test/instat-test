@@ -21,7 +21,7 @@ content here
 +++
 <ul>
   {% for bbb in site.BOARD %}
-    {%for b in bbb%}
+    {% for b in bbb %}
     <li><a href="{{ b.permalink }}">
       {{ b.title }}
       </a></li>
