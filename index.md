@@ -20,10 +20,12 @@ content here
 </ul>
 +++
 <ul>
-  {% for b in site.BOARD %}
+  {% for bbb in site.BOARD %}
+    {%for b in bbb%}
     <li><a href="{{ b.permalink }}">
       {{ b.title }}
       </a></li>
+    {% endfor %}
   {% endfor %}
 </ul>
 +++
