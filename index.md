@@ -23,6 +23,7 @@ content here
   {% for bbb in site.BOARD %}
     {{bbb}}
     {% for b in bbb %}
+    <p>{{b}}</p>
     <li><a href="{{ b.permalink }}">
       {{ b.title }}
       </a></li>
