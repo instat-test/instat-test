@@ -21,8 +21,6 @@ content here
 - - -
 <ul>
   {% for b in site.BOARD %}{% for bb in b %}{% for bbb in bb %}
-    <p>{{bb}}</p>
-    <p>{{bbb}}</p>
     <li><a href="{{ bbb.permalink }}">
       {{ bbb.title }}
       </a></li>
