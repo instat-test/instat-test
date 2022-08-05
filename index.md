@@ -12,8 +12,7 @@ content here
  
   <li>
     <a href="{{ post.url }}">
-      <img src="{{ post.image }}" />
-      <h3>{{ post.title }}</h3>
+      <p>{{ post.title }}</p>
     </a>
   </li>
  
