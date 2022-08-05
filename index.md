@@ -18,10 +18,10 @@ content here
  
   {% endfor %}
 </ul>
-::
++++
 {% for b in site.BOARD %}
     <a href="{{ b.permalink }}">
-      {{b.title}}
+      {{ b.title }}
     </a>
 {% endfor %}
-::
++++
