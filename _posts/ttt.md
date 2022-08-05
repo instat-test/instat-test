@@ -1,5 +1,5 @@
 ---
 title: 1
-permalink: /1link/
+permalink: /link/
 ---
 content 111
