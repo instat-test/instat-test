@@ -19,9 +19,11 @@ content here
   {% endfor %}
 </ul>
 +++
-{% for b in site.BOARD %}
-    <a href="{{ b.permalink }}">
+<ul>
+  {% for b in site.BOARD %}
+    <li><a href="{{ b.permalink }}">
       {{ b.title }}
-    </a>
-{% endfor %}
+      </a></li>
+  {% endfor %}
+</ul>
 +++
