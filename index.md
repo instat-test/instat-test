@@ -20,14 +20,12 @@ content here
 </ul>
 - - -
 <ul>
-  {% for bbb in site.BOARD %}
-    {{bbb}}
-    {% for b in bbb %}
-    <p>{{b}}</p>
-    <li><a href="{{ b.permalink }}">
-      {{ b.title }}
+  {% for b in site.BOARD %}{% for bb in b %}{% for bbb in bb %}
+    <p>{{bb}}</p>
+    <p>{{bbb}}</p>
+    <li><a href="{{ bbb.permalink }}">
+      {{ bbb.title }}
       </a></li>
-    {% endfor %}
-  {% endfor %}
+  {% endfor %}{% endfor %}{% endfor %}
 </ul>
 +++
