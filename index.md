@@ -18,9 +18,10 @@ content here
  
   {% endfor %}
 </ul>
-+++
+- - -
 <ul>
   {% for bbb in site.BOARD %}
+    {{bbb}}
     {% for b in bbb %}
     <li><a href="{{ b.permalink }}">
       {{ b.title }}
