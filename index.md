@@ -19,10 +19,13 @@ content here
   {% endfor %}
 </ul>
 - - -
+<!-- https://github.com/shopify/liquid/wiki/liquid-for-designers -->
 <ul>
   {%for b in site.BOARD %}
     {%assign key = b[0] %}
     {%assign props = b[1] %}
+    {{key}}
+    {{props}}
     { % for bb in b % }{ % for bbb in bb % }
     <li><a href="{{ props.permalink }}">
       {{ props.title }}
