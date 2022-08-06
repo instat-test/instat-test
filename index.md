@@ -24,15 +24,16 @@ content here
   {% for b in site.BOARD %}
     {% assign key = item[0] %}
     {% assign props = item[1] %}
-    {{ key }} -
-    {{ props }} -
+    item0 {{ item[0] }} -
+    item1 {{ item[1] }} -
     {{b}} =b
-    { % for bb in b % }{ % for bbb in bb % }
+    {% for bb in b %}{ % for bbb in bb % }
       <li><a href="{{ props.permalink }}">
         {{ props.title }}
         </a>
-      {{ item[0] }} {{item[1]}}
+      bb {{ item[0] }} == {{item[1]}}
       </li>
-  {% endfor %}{ % endfor %}{ % endfor % }
+    {% endfor %}
+  {% endfor %}
 </ul>
 + - - 
