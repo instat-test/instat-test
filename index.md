@@ -20,10 +20,13 @@ content here
 </ul>
 - - -
 <ul>
-  {% for b in site.BOARD %}{% for bb in b %}{% for bbb in bb %}
-    <li><a href="{{ bbb.permalink }}">
-      {{ bbb.title }}
+  {%for b in site.BOARD %}
+    {%assign key = b[0] %}
+    {%assign props = b[1] %}
+    { % for bb in b % }{ % for bbb in bb % }
+    <li><a href="{{ props.permalink }}">
+      {{ props.title }}
       </a></li>
-  {% endfor %}{% endfor %}{% endfor %}
+  {% endfor %}{ % endfor % }{ % endfor % }
 </ul>
-+++
++ - - 
