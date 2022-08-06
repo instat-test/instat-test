@@ -23,11 +23,13 @@ content here
 <ul>
   {% for b in site.BOARD %}
     !! {{b}} =b
+    b0{{ b[0] }}
+    b1{{ b[1] }}
     {% for bb in b %}{ % for bbb in bb % }
-      <li><a href="{{ props.permalink }}">
-        props {{ props.title }}
+      <li><a href="{{ bb.permalink }}">
+        props {{ bb.title }}
         </a>
-      bb {{ bb[0] }} == {{bb[1]}}
+      bb {{ item[0] }} == {{item[1]}}
       </li>
     {% endfor %}
   {% endfor %}
