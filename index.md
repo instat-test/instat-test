@@ -25,13 +25,17 @@ content here
     !! {{b}} =b
     b0{{ b[0] }}
     b1{{ b[1] }}
-    {% for bb in b %}{ % for bbb in bb % }
-      <li><a href="{{ bb.permalink }}">
-        props {{ bb.title }}
+    item0 {{ item[0] }}
+    item1 {{ item[1] }}
+    {% assign props = b[1] %}
+    props {{props}}
+    { % for bb in b[1] % }{ % for bbb in bb % }
+      <li><a href="{{ props.permalink }}">
+        props {{ props.title }}
         </a>
       bb {{ item[0] }} == {{item[1]}}
       </li>
-    {% endfor %}
+    { % endfor % }
   {% endfor %}
 </ul>
 + - - 
