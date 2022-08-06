@@ -10,19 +10,19 @@ baseurl:
 ANON_DEFAULT: Анон
 APPROVE_BOARDS: default, discuss, request, fic, pic, book, transport, vel, voice, magnet, hr
 BOARD:
-    default:
+  - default:
       title: /b/
       permalink: /b/
       displayname: Анон
       picture: 1
       media: False
-    request:
+  - request:
       title: /r/
       permalink: /r/
       displayname: Анон
       picture: 1
       media: False
-    discuss:
+  - discuss:
       title: /dev/
       permalink: /d/
       displayname: Сырно
