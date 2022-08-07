@@ -3,7 +3,7 @@
 <head>
   <title>{% if page.title %}{{ page.title | escape }}{% else %}}{{ site.title | escape }}{% endif %}</title>
   <meta charset="{{site.charset}}">
-  <meta http-equiv="Content-Type" content="text/html; charset={{site.charset}}">
+  <meta name="generator" content="tg-chan powered liqued engine (https://github.com/shopify/liquid/wiki/liquid-for-designers)">
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" href="/favicon.ico">
@@ -15,9 +15,9 @@
   <div class="topmenu">
     <div class="navbar">[
     {% for board in site.BOARD %}
-      {% assign bname = board[0]%}
-      {% assign b = board[1]%}
-      {% if bname in site.APPROVE_BOARDS %}
+      {% assign bname = board[0] %}
+      {% assign b = board[1] %}
+      {% if site.APPROVE_BOARDS contains bname %}
       <a title="{{b.title}}" href="{{b.permalink}}">{{b.title}}</a>
       {% endif %}
     {% endfor %} 
