@@ -8,7 +8,7 @@ baseurl:
 
 
 ANON_DEFAULT: Анон
-APPROVE_BOARDS: default, discuss, request, fic, pic, book, transport, vel, voice, magnet, hr
+APPROVE_BOARDS: default, discuss
 BOARD:
   default:
     title: /b/
