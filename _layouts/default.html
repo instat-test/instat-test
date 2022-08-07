@@ -17,9 +17,9 @@
     {% for board in site.BOARD %}
       {% assign bname = board[0]%}
       {% assign b = board[1]%}
-      {% if bname in site.APPROVE_BOARDS }
+      {% if bname in site.APPROVE_BOARDS %}
       <a title="{{b.title}}" href="{{b.permalink}}">{{b.title}}</a>
-      {%endif%}
+      {% endif %}
     {% endfor %} 
       ]
     </div>
