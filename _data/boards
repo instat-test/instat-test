@@ -1,0 +1,21 @@
+
+#BOARDs list:
+  default:
+    title: /b/
+    permalink: /b/
+    displayname: Анон
+    picture: 1
+    media: False
+  request:
+    title: /r/
+    permalink: /r/
+    displayname: Анон
+    picture: 1
+    media: False
+    disable: 1
+  discuss:
+    title: /dev/
+    permalink: /d/
+    displayname: Сырно
+    picture: 1
+    media: False
