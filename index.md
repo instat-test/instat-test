@@ -21,8 +21,11 @@ content here
 - - -
 <!-- https://github.com/shopify/liquid/wiki/liquid-for-designers -->
 <ul>
-  {% for b in site.BOARD %}
+  {% for b in site.data.boards %}
     {% assign props = b[1] %}
+    {% if props contains 'disable' %}
+      {% continue %}
+    {% endif %}
       <li><a href="{{ props.permalink }}">
         props {{ props.title }}
         </a>
