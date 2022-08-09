@@ -15,7 +15,7 @@
 </head>
 <body class="site-wrapper">
   <div class="topmenu">
-    <div class="navbar">[
+    <div class="navbar">[&nbsp;
     {%- for board in site.data.boards -%}
       {%- assign bname = board[0] -%}
       {%- assign b = board[1] -%}
@@ -23,7 +23,7 @@
       <a title="{{b.title}}" href="{{b.permalink}}">{{ b.name | default bname}}</a>{% if forloop.last <> true %} / {%endif%}
       {%- comment%}Note that there is NO "not" operator. Also note that you CANNOT use parentheses to control order of operations, and the precedence of the operators appears to be unspecified.{%endcomment -%}
     {%- endfor -%}
-    ]</div>
+    &nbsp;]</div>
   </div>
   <h1>{{ page.title }}</h1>
 {{ content }}
