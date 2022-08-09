@@ -1,12 +1,14 @@
 
 #BOARDs list:
   default:
+    name: b
     title: /b/
     permalink: /b/
     displayname: Анон
     picture: 1
     media: False
   request:
+    name: r
     title: /r/
     permalink: /r/
     displayname: Анон
@@ -14,6 +16,7 @@
     media: False
     disable: 1
   discuss:
+    name: d
     title: /dev/
     permalink: /d/
     displayname: Сырно
