@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}">
 <head>
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }} &middot; {% endif %}{{ site.title | escape | default "tgchan"}}</title>
   <meta charset="{{site.charset}}">
-  <meta name="generator" content="tg-chan powered liqued engine (https://github.com/shopify/liquid/wiki/liquid-for-designers)">
+  <meta name="generator" content="tg-chan powered liquid engine (https://github.com/shopify/liquid/wiki/liquid-for-designers)">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/umnochan.css" title="Umnochan">
-  <script src="lib/javascript/jquery-3.3.1.min.js"></script>
+  <link rel="icon" type="image/png" href="/pure/favicon.png">
+  <!-- link rel="shortcut icon" href="/favicon.ico" -->
+  <link rel="stylesheet" href="/pure/base.css">
+  <link rel="stylesheet" href="/pure/umnochan.css" title="Umnochan">
+  <script src="/pure/jquery-3.3.1.min.js"></script>
+  <script src="/pure/kusaba.js"></script>
 </head>
 <body class="site-wrapper">
   <div class="topmenu">
     <div class="navbar">[
     {% for board in site.BOARD %}
-      {% assign bname = board[0] %}
-      {% assign b = board[1] %}
+    {% assign bname = board[0] %}
+    {% assign b = board[1] %}
       {% if site.APPROVE_BOARDS contains bname %}
-      <a title="{{b.title}}" href="{{b.permalink}}">{{b.title}}</a>
-      {% endif %}
+      <a title="{{b.title}}" href="{{b.permalink}}">{{b.name | default bname}}</a>{% if forloop.last <> true %} / {%endif%}
+      {% endif %}{%comment%}Note that there is NO "not" operator. Also note that you CANNOT use parentheses to control order of operations, and the precedence of the operators appears to be unspecified.{%endcomment%}
     {% endfor %} 
-      ]
-    </div>
+    ]</div>
   </div>
   <h1>{{ page.title }}</h1>
 {{ content }}
