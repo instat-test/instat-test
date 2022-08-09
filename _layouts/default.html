@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'ru' }}">
+<html lang="{{ site.lang | default: 'ru' }}">
 <head>
-  <title>{{ site.title | escape | default 'tg&middot;chan' }}{% if page.title %} &middot; {{ page.title | escape }}{% endif %}</title>
+  <title>'tg&middot;chan'{% if page.title %} &middot; {{ page.title | escape }}{% endif %}</title>
   <meta charset="{{site.charset}}">
   <meta name="generator" content="tg-chan powered liquid engine (https://github.com/shopify/liquid/wiki/liquid-for-designers)">
   <meta name="viewport" content="width=device-width,initial-scale=1">
