@@ -6,5 +6,6 @@ github_username: jekyllrb
 url:
 baseurl:
 
+layout: board
 
 ANON_DEFAULT: Аноним
