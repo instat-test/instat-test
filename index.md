@@ -1,5 +1,5 @@
 ---
-#layout: default
+layout: board
 title: hello
 description: je test
 ---
