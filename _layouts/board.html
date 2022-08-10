@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ru' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="tg-chan powered liquid engine (https://github.com/shopify/liquid/wiki/liquid-for-designers)">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>'tg&middot;chan'{% if page.title %} &middot; {{ page.title | escape }}{% endif %}</title>
+  <link rel="icon" type="image/png" href="/pure/favicon.png">
+  <!-- link rel="shortcut icon" href="/favicon.ico" -->
+  <link rel="stylesheet" href="/pure/base.css">
+  <link rel="stylesheet" href="/pure/umnochan.css" title="Umnochan">
+  <script src="/pure/jquery-3.3.1.min.js"></script>
+  <script src="/pure/kusaba.js"></script>
+</head>
+<body class="site-wrapper">
+  <div class="topmenu">
+    <div class="navbar">[&nbsp;
+    {%- for board in site.data.boards -%}
+      {%- assign bname = board[0] -%}
+      {%- assign b = board[1] -%}
+      {%- if b contains 'disable' %}{%continue%}{% endif -%}
+        <a title="{{b.title}}" href="{{b.permalink}}">{{ b.name | default bname}}</a>{% if forloop.last <> true %} / {%endif%}
+      {%- comment%}Note that there is NO "not" operator. Also note that you CANNOT use parentheses to control order of operations, and the precedence of the operators appears to be unspecified.{%endcomment -%}
+    {%- endfor -%}
+    &nbsp;]</div>
+  </div>
+  <h1>{{ page.title }}</h1>
+  <div class="logo"><img src="/pure/favicon.png" alt="logo banner"></div>
+
+  <form id="delform" action="/board.php" method="post">
+  <form id="delform" action="/board.php" method="post">
+    <input type="hidden" name="board" value="{{board.name}}">
+    
+    <!-- кнопки всякие -->
+    <div class="unhidethread" id="unhidethread4194r" style="display: none;">
+      Thread <a href="/r/res/4194.html">4194</a> hidden.
+      <a class="btn-small btn-unidethread" href="#" onclick="togglethread('4194r');return false;" title="Un-Hide Thread">
+        <svg class="icon icon-16">
+          <use xlink:href="/css/icons/sprite.symbol.svg#plus" width="16" height="16" viewBox="0 0 16 16"></use>
+        </svg>
+      </a>
+    </div>
+    <div id="thread4194r" class="thrdcntnr">
+      <a name="s0" id="s0"></a>
+      <div class="attachment">
+        <span class="filesize"><a href="/r/src/165842776619.jpg" target="_blank" >564796874271.jpg</a> - (116.67KB, 728×473)</span>
+        <br>
+        <a class="imglink" data-full-src="/r/src/165842776619.jpg" data-thumb-src="/r/thumb/165842776619s.jpg" data-full-width="728" data-full-height="473" data-thumb-width="200" data-thumb-height="130" href="/r/src/165842776619.jpg">
+          <span id="thumb4194"><img src="/r/thumb/165842776619s.jpg" alt="4194" class="thumb" height="130" width="200"></span>
+        </a>
+      </div>
+      <!-- anchor -->
+      <a name="{{post.id}}" id="{{post.id}}"></a>
+      
+      <label>
+        <span class="postername">{{post.username}}Аноним</span>
+        <span class="time">{{post.datetime}}21.07.2022 (Чт) 21:22:46</span>
+      </label>
+      <span class="reflink">
+      	<a class="numlink" href="/r/res/4194.html#i4194">#4194</a>
+      </span>
+      <!-- больше кнопок -->
+      <span class="extrabtns">
+        <span id="hide4194">
+          <a class="post-btn post-btn-hide" href="#" onclick="togglethread('4194r');return false;" title="Скрыть нить">
+            <svg class="icon icon-16"><use xlink:href="/css/icons/sprite.symbol.svg#minus" width="16" height="16" viewBox="0 0 16 16"></use></svg></a>
+        </span>
+        <!-- приждумать "избранное"
+        <a class="post-btn post-btn-watch" href="#" onclick="addtowatchedthreads('4194', 'r');return false;" title="Добавить нить в избранное">
+          <svg class="icon icon-16">
+          <use xlink:href="/css/icons/sprite.symbol.svg#star" width="16" height="16" viewBox="0 0 16 16"></use>
+          </svg>
+        </a>
+        -->
+        <a class="post-btn post-btn-reply" href="#" onclick="return quickreply('4194');" title="Быстрый ответ">
+          <svg class="icon icon-16">
+          <use xlink:href="/css/icons/sprite.symbol.svg#reply" width="16" height="16" viewBox="0 0 16 16"></use>
+          </svg>
+        </a>&nbsp;
+      </span>
+      [<a href="/r/res/4194.html">Ответ (открыть тред)</a>]
+    
+      <div class="postbody">
+        <blockquote id="post4194">
+          {{content}}
+        </blockquote>
+      </div>
+      <!-- ответы -->
+      <div id="replies4194r" data-show-replies="7">
+        <div class="reply" id="reply4195">
+          <a name="4195" id="4195"></a>
+          <label>
+            <input type="checkbox" name="delete[]" value="4195">
+            <span class="postername">Аноним</span>
+            <span class="time">23.07.2022 (Сб) 18:03:12</span>
+          </label>
+          <span class="reflink">
+          	<a href="/r/res/4194.html#4195">No.&nbsp;</a><a class="numlink" href="/r/res/4194.html#i4195">4195</a>
+          </span>
+          <span class="extrabtns">
+          </span>
+          <span class="dnb|r|4195|n">ХЗШТА</span>
+          <div class="postbody">
+            <blockquote id="post4195">
+              ответ
+              <br />
+            </blockquote>
+          </div>
+        </div>
+        <div class="reply" id="reply4196">
+          <a name="4196" id="4196"></a>
+          <label>
+            <input type="checkbox" name="delete[]" value="4196">
+            <span class="filetitle">
+						ТЕМА
+				    </span>
+            <span class="postername">Аноним</span>
+            <span class="time">28.07.2022 (Чт) 17:43:38</span>
+          </label>
+          <span class="reflink">
+          	<a href="/r/res/4194.html#4196">No.&nbsp;</a><a class="numlink" href="/r/res/4194.html#i4196">4196</a>
+          </span>
+          <span class="extrabtns">КНОПЫ
+          </span>
+          <span class="dnb|r|4196|n">ХЗ</span>
+          <div class="postbody">
+            <blockquote id="post4196">
+              <a target="_blank" rel="nofollow" href="нофолоу">ссыла</a>
+              <br />
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </form>
+  
+</body>
+</html>
